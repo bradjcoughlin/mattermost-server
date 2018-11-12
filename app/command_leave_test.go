@@ -13,7 +13,7 @@ import (
 )
 
 func TestLeaveProviderDoCommand(t *testing.T) {
-	th := Setup().InitBasic().InitSystemAdmin()
+	th := Setup().InitBasic()
 	defer th.TearDown()
 
 	lp := LeaveProvider{}

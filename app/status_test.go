@@ -10,7 +10,7 @@ import (
 )
 
 func TestSaveStatus(t *testing.T) {
-	th := Setup().InitBasic().InitSystemAdmin()
+	th := Setup().InitBasic()
 	defer th.TearDown()
 
 	user := th.BasicUser

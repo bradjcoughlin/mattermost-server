@@ -174,14 +174,6 @@ func (me *TestHelper) InitBasic() *TestHelper {
 	return me
 }
 
-func (me *TestHelper) InitSystemAdmin() *TestHelper {
-	// me.SystemAdminUser = me.CreateUser()
-	// me.App.UpdateUserRoles(me.SystemAdminUser.Id, model.SYSTEM_USER_ROLE_ID+" "+model.SYSTEM_ADMIN_ROLE_ID, false)
-	// me.SystemAdminUser, _ = me.App.GetUser(me.SystemAdminUser.Id)
-
-	return me
-}
-
 func (me *TestHelper) MockHTTPService(handler http.Handler) *TestHelper {
 	me.MockedHTTPService = testutils.MakeMockedHTTPService(handler)
 	me.App.HTTPService = me.MockedHTTPService
