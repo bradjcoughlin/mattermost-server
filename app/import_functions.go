@@ -592,6 +592,15 @@ func (a *App) ImportUser(data *UserImportData, dryRun bool) *model.AppError {
 		})
 	}
 
+	if data.UsePostClickOpensThread != nil {
+		preferences = append(preferences, model.Preference{
+			UserId:   savedUser.Id,
+			Category: model.PREFERENCE_CATEGORY_ADVANCED_SETTINGS,
+			Name:     "feature_enabled_post_click_opens_thread",
+			Value:    *data.UsePostClickOpensThread,
+		})
+	}
+
 	if data.UseFormatting != nil {
 		preferences = append(preferences, model.Preference{
 			UserId:   savedUser.Id,

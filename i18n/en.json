@@ -3307,6 +3307,10 @@
     "translation": "Invalid markdown preview setting for User"
   },
   {
+    "id": "app.import.validate_user_import_data.advanced_props_feature_post_click_opens_thread.error",
+    "translation": "Invalid post click opens thread setting for User"
+  },
+  {
     "id": "app.import.validate_user_import_data.advanced_props_formatting.error",
     "translation": "Invalid post formatting setting for User"
   },

@@ -281,6 +281,10 @@ func validateUserImportData(data *UserImportData) *model.AppError {
 		return model.NewAppError("BulkImport", "app.import.validate_user_import_data.advanced_props_feature_markdown_preview.error", nil, "", http.StatusBadRequest)
 	}
 
+	if data.UsePostClickOpensThread != nil && !model.IsValidTrueOrFalseString(*data.UsePostClickOpensThread) {
+		return model.NewAppError("BulkImport", "app.import.validate_user_import_data.advanced_props_feature_post_click_opens_thread.error", nil, "", http.StatusBadRequest)
+	}
+
 	if data.UseFormatting != nil && !model.IsValidTrueOrFalseString(*data.UseFormatting) {
 		return model.NewAppError("BulkImport", "app.import.validate_user_import_data.advanced_props_formatting.error", nil, "", http.StatusBadRequest)
 	}

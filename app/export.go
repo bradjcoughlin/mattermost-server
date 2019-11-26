@@ -28,6 +28,9 @@ var exportablePreferences = map[ComparablePreference]string{{
 	Name:     "feature_enabled_markdown_preview",
 }: "UseMarkdownPreview", {
 	Category: model.PREFERENCE_CATEGORY_ADVANCED_SETTINGS,
+	Name:     "feature_enabled_post_click_opens_thread",
+}: "UsePostClickOpensThread", {
+	Category: model.PREFERENCE_CATEGORY_ADVANCED_SETTINGS,
 	Name:     "formatting",
 }: "UseFormatting", {
 	Category: model.PREFERENCE_CATEGORY_SIDEBAR_SETTINGS,
